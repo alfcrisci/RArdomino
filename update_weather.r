@@ -1,6 +1,6 @@
 ################################################################################################
 # PURPOSE:
-# Procedure to read cloud data: example made for two weather station by wunderground.com platform 
+# Procedure to read meteo cloud data: example made for two weather station by wunderground.com platform 
 # 
 # INSTITUTIONS:
 # 
@@ -8,7 +8,7 @@
 # Istituto di Biometeorologia - www.ibimet.cnr.it
 # FBK  Fondazione Bruno Kessler - Trento
 # Opensensors - Venezia
-# Universit‡ di Parma 
+# Universit√† di Parma 
 # 
 # Authors:
 #
