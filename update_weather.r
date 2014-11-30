@@ -52,11 +52,6 @@ ao_init=parse.ini("ao_data.ini")
 
 options(bitmapType='cairo')
  
-#####################################################################################
-# Create regular sampling of day
-
-regular_timeseries=ISOdatetime(format(Sys.Date(),"%Y"),format(Sys.Date(),"%m"),format(Sys.Date(),"%d"),0,0,0) + seq(0:46)*30*60
-
 
 #####################################################################################
 # Retrieve geolocation data   
@@ -96,7 +91,7 @@ if (data_okay_PO ==1) { dati_prato_oggi <- wunder_station_daily(prato_wunder_ID,
 if (data_okay_FI ==1) { dati_firenze_oggi <- wunder_station_daily(firenze_wunder_ID, today)}
 
 ####################################################################################################################
-# Checking data wunderground availability
+# Inizialization biometerological slot
 
 dati_prato_oggi$tapp=NA;
 dati_prato_oggi$wind=NA;
@@ -136,13 +131,13 @@ dati_firenze_xts=xts(dati_firenze_oggi,dati_firenze_oggi$Time)
 dati_prato_xts=xts(dati_prato_oggi,dati_prato_oggi$Time)
 
 ####################################################################################################################
-# Define colors
+# Define colors for line graph
 
 myColors=c("darkblue","red")
 
 
 ####################################################################################################################
-# Create  biometerological current images of wether station data and comparison in directory images
+# Create  biometerological current images of wether station data and comparison to save in  directory images
 
 
 png("images/last_weather_firenze.png")
